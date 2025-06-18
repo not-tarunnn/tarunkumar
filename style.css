@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at center, #b39fff 0%, #7b1a7b 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  padding: 2em;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 1.5em;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0); /* semi-transparent black */
+  backdrop-filter: blur(8px); /* optional: glass effect */
+  z-index: 10;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  margin-top: -35px;
+  margin-right: 2%;
+}
+
+.logo img {
+  height: 40px;
+  margin-top: 10px;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffd700;
+}
+
+#container3D canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#centered-image {
+  display: block;
+  margin: 0 auto;  /* Center horizontally */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image doesn't stretch */
+}
+
+/* Optionally, you can style the container if needed */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh; /* Optional: make the container take the full height of the viewport */
+}
+
+footer {
+  background-color: #00000000; /* dark footer for contrast */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  bottom: 2%;
+  left: 2%;
+  width: 100%;
+  z-index: 100;
+}
+
+.footer-left {
+  display: flex;
+  gap: 30px;
+}
+
+.social-btn {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  color: #ffd700; /* or any hover color */
+}
+
+.tagline {
+  position: absolute;
+  bottom: 23%;
+  left: 50%px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05); /* subtle transparent background */
+  padding: 10px 20px;
+  border-left: 4px solid #00ffc3; /* accent color */
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
