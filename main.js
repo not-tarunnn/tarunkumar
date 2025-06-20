@@ -99,12 +99,24 @@ document.onmousemove = (e) => {
 animate();
 
 
-//gsap script
-window.addEventListener('load', function () {
-    gsap.to("#centered-image", {
-      opacity: 1,         // Fade in
-      duration: 1,        // Duration of the fade-in (2 seconds)
-      ease: "power2.out"  // Easing effect for a smooth transition
-    });
-  });
+        // Get modal and buttons
+        const modal = document.getElementById("iframeModal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
 
+        // Open the modal when the button is clicked
+        openModalBtn.onclick = function() {
+            modal.style.display = "flex";
+        };
+
+        // Close the modal when the close button (X) is clicked
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Close the modal when clicking outside the iframe
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
